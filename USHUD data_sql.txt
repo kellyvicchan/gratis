@@ -1,0 +1,11 @@
+SELECT 
+    LEFT(CoC_Name,length(CoC_Name)-1) AS Location,
+    Sheltered_ES_Homeless AS Emergency_Shelters,
+    Sheltered_TH_Homeless AS Transitional_Housing,
+    Sheltered_SH_Homeless AS SafeHaven_Housing,
+    Sheltered_Total_Homeless AS Total_Sheltered,
+    Unsheltered_Homeless AS Total_Unsheltered,
+    Homeless_Family_Households,
+    Chronically_Homeless,
+    Homeless_Unaccompanied_Youth_Under_18 AS Under_18_Homeless
+FROM `bigquery-public-data.sdoh_hud_pit_homelessness.hud_pit_by_coc` 
